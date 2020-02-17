@@ -37,15 +37,13 @@ public class WebController {
 		}
 	}
 	
-	@RequestMapping( path = "/get/{id}", method = RequestMethod.GET, 
-			consumes = "application/json", produces = "application/json" )
+	@RequestMapping( path = "/get/{id}", method = RequestMethod.GET, produces = "application/json" )
 	public Employee getEmployeeByID(@PathVariable Integer id)
 	{
 		return employeeRegister.getEmployeeById(id);
 	}
 	
-	@RequestMapping( path = "/getAll", method = RequestMethod.GET, 
-			consumes = "application/json", produces = "application/json" )
+	@RequestMapping( path = "/getAll", method = RequestMethod.GET, produces = "application/json" )
 	public ArrayList<Employee> getAllEmployees()
 	{
 		return employeeRegister.getAllEmployees();
